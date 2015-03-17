@@ -1,0 +1,36 @@
+{
+  "name": "substratum",
+  "version": "0.1.0",
+  "description": "Common configuration for Polymer node projects. Sets up static analysis, testing and more.",
+  "keywords": [
+    "testing",
+    "linting",
+    "configuration",
+    "packages"
+  ],
+  "homepage": "https://github.com/PolymerLabs/substratum",
+  "bugs": "https://github.com/PolymerLabs/substratum/issues",
+  "license": {
+    "type": "BSD-3-Clause",
+    "url": "http://polymer.github.io/LICENSE.txt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PolymerLabs/substratum.git"
+  },
+  "main": "./src/index.js",
+  "devDependencies": {
+    "gulp": "^3.8.11"
+  },
+  "dependencies": {
+    "babel": "^4.7.12",
+    "es6-template-strings": "^0.1.0",
+    "esprima": "mikesherov/esprima#templateStrings",
+    "gulp-jscs": "^1.4.0",
+    "gulp-jshint": "^1.9.2",
+    "jshint-stylish": "^1.0.1",
+    "lazypipe": "^0.2.2",
+    "run-sequence": "^1.0.2",
+    "strip-json-comments": "^1.0.2"
+  }
+}

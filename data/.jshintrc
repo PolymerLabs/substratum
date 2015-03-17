@@ -1,0 +1,7 @@
+{
+  "esnext": true,
+  "node": true,
+  "browser": true,
+  "eqnull": true,
+  "newcap": false
+}
