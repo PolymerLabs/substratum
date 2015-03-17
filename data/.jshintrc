@@ -3,5 +3,16 @@
   "node": true,
   "browser": true,
   "eqnull": true,
-  "newcap": false
+  // Deprecated JSHint options that are subsumed by JSCS.
+  "camelcase": false,
+  "immed": false,
+  "indent": false,
+  "maxlen": false,
+  "newcap": false,
+  "noempty": false,
+  "quotmark": false,
+  "laxbreak": false,
+  "laxcomma": false,
+  "multistr": false,
+  "sub": false
 }
