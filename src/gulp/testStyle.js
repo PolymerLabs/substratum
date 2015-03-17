@@ -21,16 +21,16 @@ import * as utils from '../utils';
  * @param {!Context} context
  */
 export function configureTasks(gulp, context) {
-  gulp.task('test:style', function(done) {
+  gulp.task('test:style', (done) => {
     runSequence.use(gulp)('test:style:jshint', 'test:style:jscs', done);
   });
 
-  gulp.task('test:style:jshint', function() {
+  gulp.task('test:style:jshint', () => {
     gulp.src(context.sources).pipe(jshintPipe(context));
   });
 
-  gulp.task('test:style:jscs', function() {
-    gulp.src(context.sources).pipe(jscsPipe(context));
+  gulp.task('test:style:jscs', () => {
+    gulp.src(context.jsSources).pipe(jscsPipe(context));
   });
 }
 

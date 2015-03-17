@@ -28,9 +28,14 @@
     "esprima": "mikesherov/esprima#templateStrings",
     "gulp-jscs": "^1.4.0",
     "gulp-jshint": "^1.9.2",
+    "gulp-plumber": "^1.0.0",
+    "gulp-watch": "^4.2.0",
     "jshint-stylish": "^1.0.1",
     "lazypipe": "^0.2.2",
+    "node-notifier": "^4.1.2",
+    "pluralize": "^1.1.2",
     "run-sequence": "^1.0.2",
+    "stream-array": "^1.0.1",
     "strip-json-comments": "^1.0.2"
   }
 }
