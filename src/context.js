@@ -17,10 +17,11 @@ export default class Context {
 
   /** @param {Object=} options Initial options that override the defaults. */
   constructor(options) {
-    Object.assign(this, options);
-
     // Note that we cannot safely use getters if we want them to be consumable
-    // by the es6-template-strings module.
+    // by the es6-template-strings module. So we assign all the things we might
+    // want access to in templates.
+    Object.assign(this, Context.DEFAULTS, options);
+
     this.substratumRoot = path.resolve(__dirname, '..');
     this.substratumData = path.join(this.substratumRoot, 'data');
     this.jscsrcPath     = path.join(this.substratumData, '.jscsrc');
@@ -28,10 +29,14 @@ export default class Context {
     this.esprimaPath    = path.join(this.substratumRoot, 'node_modules', 'esprima');
   }
 
+  get jsSources() {
+    return this.sources.filter(f => /\.js$/.test(f));
+  }
+
 }
 
 // https://esdiscuss.org/topic/es7-property-initializers
-Object.assign(Context.prototype, {
-  /** Files or globs representing the project's source files. */
+Context.DEFAULTS = {
+  /** Files or globs representing the project's JS source files. */
   sources: ['src/**/*.{js,html}'],
-});
+};

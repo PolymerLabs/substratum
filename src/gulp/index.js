@@ -11,6 +11,7 @@ import runSequence from 'run-sequence';
 
 import Context        from '../context';
 import * as testStyle from './testStyle';
+import * as watch     from './watch';
 
 /**
  * Configures shared gulp tasks for Substratum based projects.
@@ -22,8 +23,9 @@ export function configureTasks(gulp, options) {
   let context = new Context(options);
 
   testStyle.configureTasks(gulp, context);
+  watch.configureTasks(gulp, context);
 
-  gulp.task('test', function(done) {
+  gulp.task('test', (done) => {
     runSequence.use(gulp)('test:style', done);
   });
 }
