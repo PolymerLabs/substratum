@@ -1,0 +1,20 @@
+{
+  // Until Esprima is released with full ES6 support, we're going to be stuck
+  // on the bleeding edge.
+  "esprima": "${ esprimaPath }",
+  // See https://github.com/jscs-dev/node-jscs/blob/master/presets/google.json
+  "preset": "google",
+  "esnext": true,
+  "validateQuoteMarks": {
+    "mark": "'",
+    "escape": true
+  },
+  "requireCurlyBraces": [
+    "else",
+    "for",
+    "while",
+    "do",
+    "try",
+    "catch"
+  ]
+}
