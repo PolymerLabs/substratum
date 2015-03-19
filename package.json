@@ -1,6 +1,6 @@
 {
   "name": "substratum",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Common configuration for Polymer node projects. Sets up static analysis, testing and more.",
   "keywords": [
     "testing",
