@@ -35,6 +35,12 @@ namespaces, and a namespace tasks will run all tasks under them. I.e.
 
 For a full reference, just run `gulp -T`.
 
+## `watch`
+
+This should be your bread and butter. Leave `gulp watch` running in the 
+background, and it will continually run tests against any file that changes as
+you edit it. Any issues will trigger a notification for you.
+
 ## `test:style:jshint`
 
 Runs jshint [configured for a modern world](data/.jshintrc) against your 
